@@ -1,0 +1,108 @@
+			:root {
+				--ink: #222;
+				--brand: #3b82f6;
+				--accent: #16a34a;
+				--light: #f5f5f5;
+				--dark: #1f2937;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				color: var(--ink);
+				background: #ffffff;
+			}
+
+			.brand-title {
+				font-family: inherit;
+				letter-spacing: 0;
+			}
+
+			.hero-market {
+				background: var(--light);
+				color: var(--ink);
+				border-radius: 6px;
+				border: 1px solid #ddd;
+			}
+
+			.tagline {
+				text-transform: none;
+				font-size: 0.9rem;
+				letter-spacing: 0;
+				color: #666;
+			}
+
+			.glass-panel {
+				background: #fff;
+				border: 1px solid #ddd;
+				border-radius: 6px;
+			}
+
+			.pill-nav a {
+				border-radius: 4px;
+				padding: 0.35rem 0.8rem;
+				font-weight: 500;
+				color: var(--dark);
+				border: 1px solid #ddd;
+			}
+
+			.pill-nav a.is-active,
+			.pill-nav a:hover {
+				background: var(--brand);
+				border-color: var(--brand);
+				color: #fff;
+			}
+
+			.section-title {
+				font-weight: 600;
+				font-size: 1.6rem;
+			}
+
+			.card-hover {
+				transition: none;
+			}
+
+			.card-hover:hover {
+				transform: none;
+				box-shadow: none;
+			}
+
+			.product-badge {
+				background: var(--accent);
+				color: #fff;
+				font-size: 0.75rem;
+				letter-spacing: 0;
+				border-radius: 4px;
+				padding: 0.2rem 0.5rem;
+			}
+
+			.price {
+				font-size: 1.1rem;
+				font-weight: 600;
+			}
+
+			.price span {
+				color: #777;
+				text-decoration: line-through;
+				font-weight: 400;
+				margin-left: 0.25rem;
+				font-size: 0.9rem;
+			}
+
+			.soft-grid {
+				background: #fff;
+				border-radius: 6px;
+				border: 1px solid #ddd;
+			}
+
+			.newsletter {
+				background: var(--light);
+				border-radius: 6px;
+				border: 1px solid #ddd;
+			}
+
+			.footer-panel {
+				background: #f0f0f0;
+				color: #333;
+				border-radius: 6px;
+				border: 1px solid #ddd;
+			}
