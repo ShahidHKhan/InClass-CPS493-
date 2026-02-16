@@ -362,5 +362,20 @@
 				</section>
 			</div>
 		</section>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@3.5.28/dist/vue.global.min.js"></script>
+		<script>
+			createApp({
+				setup() {
+					const isMenuActive = ref(false);
+					const toggleMenu = () => {
+						isMenuActive.value = !isMenuActive.value;
+					};
+					
+					return { isMenuActive,toggleMenu
+					};
+				}
+			}).mount('body');
+		</script>
 	</body>
 </html>
