@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 999.99,
+      "description": "High-performance laptop for professionals"
+    },
+    {
+      "id": 2,
+      "name": "Wireless Mouse",
+      "price": 29.99,
+      "description": "Ergonomic wireless mouse with long battery life"
+    },
+    {
+      "id": 3,
+      "name": "USB-C Cable",
+      "price": 15.99,
+      "description": "Durable USB-C charging cable"
+    },
+    {
+      "id": 4,
+      "name": "Monitor",
+      "price": 349.99,
+      "description": "4K UltraHD monitor with 27-inch display"
+    },
+    {
+      "id": 5,
+      "name": "Mechanical Keyboard",
+      "price": 129.99,
+      "description": "RGB mechanical keyboard with custom switches"
+    }
+  ]
+}
