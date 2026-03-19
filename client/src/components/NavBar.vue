@@ -3,6 +3,11 @@ import { ref } from 'vue';
 import { RouterLink } from 'vue-router'
 
 const isActive = ref(false);
+
+function toggleCart() {
+    const cartStore = useCartStore();
+    cartStore.isCartOpen = !cartStore.isCartOpen;
+}
 </script>
 
 <template>
@@ -58,6 +63,17 @@ const isActive = ref(false);
                 </div>
 
                 <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a-@click="toggleCart" class="button is-light">
+                            <span class="tag is-normal">0</span>
+                            <span class="icon">
+
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                            <span>Cart</span>
+                        </a>
+
+                    </div>
                     <div class="navbar-item">
                         <div class="buttons">
                             <RouterLink to="/sign-up" active-class="is-active" class="button is-primary">
