@@ -1,0 +1,53 @@
+[
+	{
+		"id": 1,
+		"firstname": "John",
+		"lastname": "Doe",
+		"gender": "male",
+		"email": "john.doe@example.com",
+		"phone": "+1-555-0101",
+		"birthdate": "1990-06-12",
+		"image": "https://i.pravatar.cc/150?img=1",
+		"address": {
+			"address": "123 Main St",
+			"city": "Buffalo",
+			"state": "NY",
+			"country": "USA"
+		},
+		"role": "admin"
+	},
+	{
+		"id": 2,
+		"firstname": "Jane",
+		"lastname": "Smith",
+		"gender": "female",
+		"email": "jane.smith@example.com",
+		"phone": "+1-555-0102",
+		"birthdate": "1994-02-20",
+		"image": "https://i.pravatar.cc/150?img=2",
+		"address": {
+			"address": "456 Park Ave",
+			"city": "Rochester",
+			"state": "NY",
+			"country": "USA"
+		},
+		"role": "moderator"
+	},
+	{
+		"id": 3,
+		"firstname": "Alex",
+		"lastname": "Rivera",
+		"gender": "non-binary",
+		"email": "alex.rivera@example.com",
+		"phone": "+1-555-0103",
+		"birthdate": "1998-11-05",
+		"image": "https://i.pravatar.cc/150?img=3",
+		"address": {
+			"address": "789 Lake Rd",
+			"city": "Syracuse",
+			"state": "NY",
+			"country": "USA"
+		},
+		"role": "user"
+	}
+]
