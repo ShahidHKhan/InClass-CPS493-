@@ -2,11 +2,42 @@
 
 import type { user } from '../types';
 import data from '../data/users.json';
+import { PagingRequest } from '../types/dataEnvelopes';
+import { count } from 'console';
 
 const users = data as user[];
 
-export function getAll() {
-    return users;
+export function getAll(params: PagingRequest): user[] {
+    let users = data.users as user[];
+    const count = users.length;
+
+    if (params?.search) {
+        const search = params.search.toLowerCase();
+        users = users.filter(u =>
+            `${u.firstname} ${u.lastname}`.toLowerCase().includes(search)
+        );
+    }
+
+    if (params?.sortBy) {
+        users.sort((a, b) => {
+            const aValue = a[params.sortBy as keyof user];
+            const bValue = b[params.sortBy as keyof user];
+
+            if (aValue < bValue) {
+                return params.descending ? 1 : -1;
+            }
+            if (aValue > bValue) {
+                return params.descending ? -1 : 1;
+            }
+            return 0;
+        });
+    }
+
+    const page = params?.page || 1
+    const pageSize = params?.pageSize || 10;
+    const start = (page - 1) * pageSize;
+    users = users.slice(start, start + pageSize);
+    return {users, count};
 }   
 
 export function get(id: number): user {

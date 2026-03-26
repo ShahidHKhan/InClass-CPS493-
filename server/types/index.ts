@@ -1,3 +1,5 @@
+export { DataEnvelope, DataListEnvelope } from "./dataEnvelopes";
+
 export type product = {
     id: number;
     name: string;

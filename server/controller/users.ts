@@ -2,19 +2,24 @@
 
 import {Router} from "express";
 import { getAll, get, create, update, remove } from "../models/users";
+import { user, DataEnvelope, DataListEnvelope } from "../types";
 
 const app = Router();
 
 app
 //blank
 .get("/", (req, res) => {
-    res.send(getAll().map(x => ({
-        ...x,
-        password: undefined
-    })));
+    const {users, count} = getAll(req.query);
+    const sanitizedUsers = users.map(({id, firstname, lastname, email}) => ({id, firstname, lastname, email}));
+    const dataEnvelope: DataListEnvelope<user> = {
+        data: sanitizedUsers,
+        isSuccess: true,
+        total: count
+    };
+    res.send(dataEnvelope);
 })
 .get("/count", (req, res) => {
-    const count = getAll().length;
+    const { count } = getAll(req.query);
     res.send({ count });
 })
 //anything after the slash is considered an id
@@ -39,7 +44,12 @@ app
     const userId = req.params.id;
     // Simulate deleting a user
     const removedUser = remove(parseInt(userId));
-    res.send({message: `User with ID ${userId} deleted`, user: removedUser});
+    const response: DataEnvelope<user> = {
+        data: removedUser,
+        isSuccess: true,
+        message: `${removedUser.firstname} ${removedUser.lastname} deleted`
+    };
+    res.send(response);
 });
 
 export default app;
